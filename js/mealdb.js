@@ -15,14 +15,14 @@ const resutFood = (foodData) =>{
     foodData.forEach(food => {
         console.log(food.strMeal);
         const div = document.createElement('div');
-    div.classList.add('col');
+    div.classList.add('col','mb-3');
     div.innerHTML = 
              ` <div class="card">
                 <img src="${food.strMealThumb}" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">${food.strMeal}</h5>
                   <p class="card-text">Origin: ${food.strArea}</p>
-                  <p class="card-text">Origin: ${food.strCategory}</p>
+                  <p class="card-text -mt-2 ">Category: ${food.strCategory}</p>
                 </div>
               </div>`;
     result.appendChild(div);
