@@ -22,7 +22,8 @@ const resutFood = (foodData) =>{
                 <div class="card-body">
                   <h5 class="card-title">${food.strMeal}</h5>
                   <p class="card-text">Origin: ${food.strArea}</p>
-                  <p class="card-text -mt-2 ">Category: ${food.strCategory}</p>
+                  <p class="card-text fw-bold -mt-2 ">Category: ${food.strCategory}</p>
+                  <p class="card-text -mt-2 "> Instructions: ${food.strInstructions.slice(0,150)}</p>
                 </div>
               </div>`;
     result.appendChild(div);

@@ -10,14 +10,19 @@
     <link rel="stylesheet" href="css/mealdb.css">
     <title>Meal Db</title>
   </head>
-  <body class="bg-dark">
-    <div class="container mt-5">
+  <body style="background-image: url('img/pexels-visual-stories-__-micheile-7886451.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;">
+    <div class="container bodyback mt-5">
         <!-- search area  -->
-        <h2 class="text-center text-white mb-3" >Search your favourite food here!!!</h2>
-        <div class="input-group mx-auto mb-3 w-50">
-            <input id="food" type="text" class="form-control py-2" placeholder="Search food here" aria-label="Recipient's username" aria-describedby="button-addon2">
-            <button onclick="searchFood()" class="btn btn-outline-secondary px-2" type="button" id="search-btn">Search</button>
-          </div>
+        <div class="bg-dark p-4 rounded rounded-3 mb-4" >
+            <h2 class="text-center text-white mb-3" >Search your favourite food here!!!</h2>
+            <div class="input-group mx-auto mb-3 w-50">
+                <input id="food" type="text" class="form-control py-2" placeholder="Search food here" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button onclick="searchFood()" class="btn btn-success px-2" type="button" id="search-btn">Search</button>
+              </div>
+        </div>
+        
 
 
           <!-- result area  -->
