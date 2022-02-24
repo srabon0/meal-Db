@@ -1,4 +1,4 @@
-const searchFood = () => {
+const searchFood = async() => {
     console.log('food searching');
     const food = document.getElementById('food');
     const foodName = food.value;
@@ -7,10 +7,10 @@ const searchFood = () => {
     }else{
       food.value = " ";
       const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${foodName}`;
-   
-      fetch(url)
-      .then(res => res.json())
-      .then (data => resutFood(data.meals));
+  //  using async await
+      const data = await fetch(url);
+      const dataJson = await data.json();
+      resutFood(dataJson.meals);
     }
     
 }
