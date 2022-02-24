@@ -2,16 +2,23 @@ const searchFood = () => {
     console.log('food searching');
     const food = document.getElementById('food');
     const foodName = food.value;
-    food.value = " ";
-    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${foodName}`;
-    fetch(url)
-    .then(res => res.json())
-    .then (data => resutFood(data.meals));
+    if (foodName == ""){
+      console.log("error.")
+    }else{
+      food.value = " ";
+      const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${foodName}`;
+   
+      fetch(url)
+      .then(res => res.json())
+      .then (data => resutFood(data.meals));
+    }
+    
 }
 
 const resutFood = (foodData) =>{
     console.log(foodData);
     const result = document.getElementById('result');
+    result.textContent = "";
     foodData.forEach(food => {
         console.log(food.strMeal);
         const div = document.createElement('div');
